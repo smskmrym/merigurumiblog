@@ -11,10 +11,20 @@ namespace merigurumiblog.Controllers
 {
     public class HomeController : Controller
     {
- 
+        MerigurumiblogContext context = new MerigurumiblogContext();
+
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+        public PartialViewResult PostListeleWidget()
+        {
+            return PartialView(context.Post.ToList());
         }
     }
 }

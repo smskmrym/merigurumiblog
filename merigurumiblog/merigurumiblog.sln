@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "merigurumiblog", "merigurumiblog\merigurumiblog.csproj", "{6CB2F33D-AECE-4E8F-83B6-836E867CD20D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "merigurumiblog", "merigurumiblog\merigurumiblog.csproj", "{1D77416C-8E19-435D-A236-88A9E775222C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6CB2F33D-AECE-4E8F-83B6-836E867CD20D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CB2F33D-AECE-4E8F-83B6-836E867CD20D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CB2F33D-AECE-4E8F-83B6-836E867CD20D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CB2F33D-AECE-4E8F-83B6-836E867CD20D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D77416C-8E19-435D-A236-88A9E775222C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D77416C-8E19-435D-A236-88A9E775222C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D77416C-8E19-435D-A236-88A9E775222C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D77416C-8E19-435D-A236-88A9E775222C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E788E280-2EFD-4083-A8C9-AC7CB99F1EA0}
+		SolutionGuid = {51117F1B-D056-45A9-A593-0A3E56193CEF}
 	EndGlobalSection
 EndGlobal

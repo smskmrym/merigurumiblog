@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Content Include="Content\blog.html" />
-    <Content Include="Content\style.css" />
     <Content Include="Content\style\css\blank.html" />
     <Content Include="Content\style\css\bootstrap.min.css" />
     <Content Include="Content\style\css\color\red.css" />
@@ -19,6 +18,7 @@
     <Content Include="Content\style\css\images\openhand.html" />
     <Content Include="Content\style\css\plugins.css" />
     <Content Include="Content\style\css\slider-pro.css" />
+    <Content Include="Content\favicon.ico" />
     <Content Include="Content\style\fonts\glyphicons-halflings-regular-2.html" />
     <Content Include="Content\style\fonts\glyphicons-halflings-regular-3.html" />
     <Content Include="Content\style\fonts\glyphicons-halflings-regular-4.html" />
@@ -190,6 +190,40 @@
     <Content Include="Content\style\js\jQuery2.1.3.js" />
     <Content Include="Content\style\js\plugins.js" />
     <Content Include="Content\style\js\scripts.js" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Content\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="Content\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Content\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="Content\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Content\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="Content\lib\bootstrap\LICENSE" />
+    <Content Include="Content\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="Content\lib\jquery-validation\dist\additional-methods.js" />
+    <Content Include="Content\lib\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="Content\lib\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="Content\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="Content\lib\jquery-validation\LICENSE.md" />
+    <Content Include="Content\lib\jquery\dist\jquery.js" />
+    <Content Include="Content\lib\jquery\dist\jquery.min.js" />
+    <Content Include="Content\lib\jquery\dist\jquery.min.map" />
+    <Content Include="Content\lib\jquery\LICENSE.txt" />
+    <Content Include="Content\style.css" />
     <Content Include="Content\style\type\bebas.css" />
     <Content Include="Content\style\type\bebas\bebasneue_bold-webfont.eot" />
     <Content Include="Content\style\type\bebas\bebasneue_bold-webfont.svg" />
@@ -233,11 +267,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="EntityFramework" Version="6.4.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.0" />
   </ItemGroup>
 
