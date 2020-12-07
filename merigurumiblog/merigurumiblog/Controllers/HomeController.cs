@@ -11,7 +11,12 @@ namespace merigurumiblog.Controllers
 {
     public class HomeController : Controller
     {
-        MerigurumiblogContext context = new MerigurumiblogContext();
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
 
         public IActionResult Index()
         {
@@ -22,9 +27,11 @@ namespace merigurumiblog.Controllers
         {
             return View();
         }
-        public PartialViewResult PostListeleWidget()
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
         {
-            return PartialView(context.Post.ToList());
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

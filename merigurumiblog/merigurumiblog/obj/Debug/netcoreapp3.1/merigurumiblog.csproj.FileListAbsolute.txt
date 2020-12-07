@@ -22,8 +22,6 @@ C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\merigurumiblog.RazorTargetAssemblyInfo.cs
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\staticwebassets\merigurumiblog.StaticWebAssets.Manifest.cache
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\staticwebassets\merigurumiblog.StaticWebAssets.xml
-C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\merigurumiblog.csproj.CoreCompileInputs.cache
-C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\merigurumiblog.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\Razor\Controllers\Index.cshtml.g.cs
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\Razor\Controllers\PostListeleWidget.cshtml.g.cs
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\merigurumiblog.dll
@@ -78,3 +76,9 @@ C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\bin
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\merigurumiblog.Views.pdb
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\merigurumiblog.csproj.CopyComplete
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\merigurumiblog.genruntimeconfig.cache
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\Razor\Controllers\CategoryWidget.cshtml.g.cs
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\bin\Debug\netcoreapp3.1\Syncfusion.EJ2.dll
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\bin\Debug\netcoreapp3.1\Syncfusion.Licensing.dll
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\merigurumiblog.csproj.CoreCompileInputs.cache
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\merigurumiblog.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblog\obj\Debug\netcoreapp3.1\merigurumiblog.MvcApplicationPartsAssemblyInfo.cache
