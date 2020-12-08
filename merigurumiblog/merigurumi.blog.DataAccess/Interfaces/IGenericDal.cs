@@ -18,6 +18,7 @@ namespace merigurumi.blog.DataAccess.Interfaces
         Task<TEntity> GetAsync(Expression<Func<TEntity,bool>> filter);
         Task AddAsync(TEntity entity);
         Task UpdateAsync(TEntity entity);
+        Task<TEntity> FindByIdAsync(int id);
         Task RemoveAsync(TEntity entity);
 
 

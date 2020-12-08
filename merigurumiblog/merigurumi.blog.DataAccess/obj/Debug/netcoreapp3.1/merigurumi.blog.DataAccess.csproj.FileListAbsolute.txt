@@ -2,3 +2,14 @@ C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Da
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\obj\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.csprojAssemblyReference.cache
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\obj\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.AssemblyInfoInputs.cache
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\obj\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.AssemblyInfo.cs
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\bin\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.deps.json
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\bin\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.runtimeconfig.json
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\bin\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.runtimeconfig.dev.json
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\bin\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.dll
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\bin\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.pdb
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\bin\Debug\netcoreapp3.1\merigurumi.blog.Entities.pdb
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\obj\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\obj\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.csproj.CopyComplete
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\obj\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.dll
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\obj\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.pdb
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DataAccess\obj\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.genruntimeconfig.cache

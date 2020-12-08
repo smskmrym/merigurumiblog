@@ -1,0 +1,14 @@
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\bin\Debug\netcoreapp3.1\merigurumi.blog.Business.deps.json
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\bin\Debug\netcoreapp3.1\merigurumi.blog.Business.dll
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\bin\Debug\netcoreapp3.1\merigurumi.blog.Business.pdb
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\bin\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.dll
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\bin\Debug\netcoreapp3.1\merigurumi.blog.Entities.dll
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\bin\Debug\netcoreapp3.1\merigurumi.blog.DataAccess.pdb
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\bin\Debug\netcoreapp3.1\merigurumi.blog.Entities.pdb
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\obj\Debug\netcoreapp3.1\merigurumi.blog.Business.csprojAssemblyReference.cache
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\obj\Debug\netcoreapp3.1\merigurumi.blog.Business.AssemblyInfoInputs.cache
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\obj\Debug\netcoreapp3.1\merigurumi.blog.Business.AssemblyInfo.cs
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\obj\Debug\netcoreapp3.1\merigurumi.blog.Business.csproj.CoreCompileInputs.cache
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\obj\Debug\netcoreapp3.1\merigurumi.blog.Business.csproj.CopyComplete
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\obj\Debug\netcoreapp3.1\merigurumi.blog.Business.dll
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\obj\Debug\netcoreapp3.1\merigurumi.blog.Business.pdb

@@ -1,4 +1,5 @@
-﻿using merigurumi.blog.Entities.concrete;
+﻿using merigurumi.blog.DataAccess.concrete.EFCore.Mapping;
+using merigurumi.blog.Entities.concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System;
@@ -11,7 +12,19 @@ namespace merigurumi.blog.DataAccess.concrete.EFCore.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-8DJ1JG0\\MICROSOFTSQL;Database=MVCmylibrariesDB;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-8DJ1JG0\\MICROSOFTSQL;Database=merigurumiblogDB;Trusted_Connection=True;MultipleActiveResultSets=true");
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new AppUserMap());
+            modelBuilder.ApplyConfiguration(new BlogMap());
+            modelBuilder.ApplyConfiguration(new CategoryMap());
+            modelBuilder.ApplyConfiguration(new CategoryBlogMap());
+            modelBuilder.ApplyConfiguration(new CommentMap());
+
+
+
+
         }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Blog> Blogs { get; set; }

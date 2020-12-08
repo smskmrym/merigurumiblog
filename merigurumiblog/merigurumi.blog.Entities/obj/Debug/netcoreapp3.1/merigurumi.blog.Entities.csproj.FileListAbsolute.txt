@@ -3,6 +3,7 @@ C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.En
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Entities\obj\Debug\netcoreapp3.1\merigurumi.blog.Entities.csprojAssemblyReference.cache
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Entities\obj\Debug\netcoreapp3.1\merigurumi.blog.Entities.AssemblyInfoInputs.cache
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Entities\obj\Debug\netcoreapp3.1\merigurumi.blog.Entities.AssemblyInfo.cs
-C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Entities\bin\Debug\netcoreapp3.1\merigurumi.blog.Entities.runtimeconfig.json
-C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Entities\bin\Debug\netcoreapp3.1\merigurumi.blog.Entities.runtimeconfig.dev.json
-C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Entities\obj\Debug\netcoreapp3.1\merigurumi.blog.Entities.genruntimeconfig.cache
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Entities\bin\Debug\netcoreapp3.1\merigurumi.blog.Entities.pdb
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Entities\obj\Debug\netcoreapp3.1\merigurumi.blog.Entities.csproj.CoreCompileInputs.cache
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Entities\obj\Debug\netcoreapp3.1\merigurumi.blog.Entities.dll
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Entities\obj\Debug\netcoreapp3.1\merigurumi.blog.Entities.pdb
