@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ValidationRules\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\merigurumi.blog.DataAccess\merigurumi.blog.DataAccess.csproj" />
+    <ProjectReference Include="..\merigurumi.blog.Entities\merigurumi.blog.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
