@@ -21,7 +21,7 @@ namespace merigurumi.blog.Business.concrete
            await _genericDal.AddAsync(entity);
         }
 
-        public async Task<TEntity> FindById(int id)
+        public async Task<TEntity> FindByIdAsync(int id)
         {
             return await _genericDal.FindByIdAsync(id);
         }

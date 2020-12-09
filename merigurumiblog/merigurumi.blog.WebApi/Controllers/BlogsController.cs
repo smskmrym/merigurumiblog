@@ -7,6 +7,7 @@ using AutoMapper;
 using merigurumi.blog.Business.Interfaces;
 using merigurumi.blog.DTO.DTOs.BlogDtos;
 using merigurumi.blog.Entities.concrete;
+using merigurumi.blog.WebApi.Enams;
 using merigurumi.blog.WebApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +16,7 @@ namespace merigurumi.blog.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BlogsController : ControllerBase
+    public class BlogsController : BaseController
     {
         private readonly IBlogService _blogService;
         private readonly IMapper _mapper;
@@ -24,68 +25,80 @@ namespace merigurumi.blog.WebApi.Controllers
             _blogService = blogService;
             _mapper = mapper;
         }
+
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             return Ok(_mapper.Map<List<BlogListDto>>(await _blogService.GetAllSortedByPostedTimeAsync()));
         }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            return Ok(_mapper.Map<BlogListDto>(await _blogService.FindById(id)));
+            return Ok(_mapper.Map<BlogListDto>(await _blogService.FindByIdAsync(id)));
         }
+
         [HttpPost]
-        public async Task<IActionResult> Create([FromForm]BlogAddModel blogAddModel)
+        public async Task<IActionResult> Create([FromForm] BlogAddModel blogAddModel)
         {
-            if (blogAddModel.Image != null)
+            var uploadModel = await UploadFileAsync(blogAddModel.Image, "image/jpeg");
+            if (uploadModel.UploadState == UploadState.Success)
             {
-                if (blogAddModel.Image.ContentType != "image/jpeg")
-                {
-                    return BadRequest("desteklenmeyen dosya");
-                }
-                var newName = Guid.NewGuid() + Path.GetExtension(blogAddModel.Image.FileName);
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/image" + newName);
-                var stream = new FileStream(path, FileMode.Create);
-                await blogAddModel.Image.CopyToAsync(stream);
-
-                blogAddModel.ImagePath = newName;
+                blogAddModel.ImagePath = uploadModel.NewName;
+                await _blogService.AddAsync(_mapper.Map<Blog>(blogAddModel));
+                return Created("", blogAddModel);
             }
-
-            await _blogService.AddAsync(_mapper.Map<Blog>(blogAddModel));
-            return Created("", blogAddModel);
+            else if (uploadModel.UploadState == UploadState.NotExist)
+            {
+                await _blogService.AddAsync(_mapper.Map<Blog>(blogAddModel));
+                return Created("", blogAddModel);
+            }
+            else
+            {
+                return BadRequest(uploadModel.ErrorMessage);
+            }
         }
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromForm]BlogUpdateModel blogUpdateModel)
-        {
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromForm] BlogUpdateModel blogUpdateModel)
+        {
             if (id != blogUpdateModel.Id)
                 return BadRequest("geçersiz id");
-            if (blogUpdateModel.Image != null)
+
+            var uploadModel = await UploadFileAsync(blogUpdateModel.Image, "image/jpeg");
+            if (uploadModel.UploadState == UploadState.Success)
             {
-                if (blogUpdateModel.Image.ContentType != "image/jpeg")
-                {
-                    return BadRequest("desteklenmeyen dosya türü");
-                }
-                var newName = Guid.NewGuid() + Path.GetExtension(blogUpdateModel.Image.FileName);
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/image" + newName);
-                var stream = new FileStream(path, FileMode.Create);
-                await blogUpdateModel.Image.CopyToAsync(stream);
+                var updatedBlog = await _blogService.FindByIdAsync(blogUpdateModel.Id);
 
-                blogUpdateModel.ImagePath = newName;
+                updatedBlog.ShortDescription = blogUpdateModel.ShortDescription;
+                updatedBlog.Title = blogUpdateModel.Title;
+                updatedBlog.Description = blogUpdateModel.Description;
+                updatedBlog.ImagePath = uploadModel.NewName;
+
+                await _blogService.UpdateAsync(updatedBlog);
+                return NoContent();
             }
-
-            await _blogService.UpdateAsync(_mapper.Map<Blog>(blogUpdateModel));
-            return NoContent();
-
+            else if (uploadModel.UploadState == UploadState.NotExist)
+            {
+                var updatedBlog= await _blogService.FindByIdAsync(blogUpdateModel.Id);
+                updatedBlog.ShortDescription = blogUpdateModel.ShortDescription;
+                updatedBlog.Title = blogUpdateModel.Title;
+                updatedBlog.Description = blogUpdateModel.Description;
+                
+                await _blogService.UpdateAsync(updatedBlog);
+                return NoContent();
+            }
+            else
+            {
+                return BadRequest(uploadModel.ErrorMessage);
+            }
         }
+       
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             await _blogService.RemoveAsync(new Blog { Id = id });
             return NoContent();
         }
-
-
     }
-
 }
