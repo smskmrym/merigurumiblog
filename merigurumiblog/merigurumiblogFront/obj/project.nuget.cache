@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hrJ4dotk5o2imXTSonBIe11q1r5L9AEqozemfB2yCpay9DJ96O12cnRNoxw0ykrwmOkCFj1E8e7Rj8HgJu8oZw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\merigurumiblogFront.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\meri\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

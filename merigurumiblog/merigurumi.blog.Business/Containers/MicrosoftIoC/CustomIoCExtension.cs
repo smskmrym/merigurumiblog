@@ -19,6 +19,9 @@ namespace merigurumi.blog.Business.Containers.MicrosoftIoC
             services.AddScoped<IBlogService, BlogManager>();
             services.AddScoped<IBlogDal, EfBlogRepository>();
 
+            services.AddScoped<ICategoryService, CategoryManager>();
+            services.AddScoped<ICategoryDal, EfCategoryRepository>();
+
         }
     }
 }
