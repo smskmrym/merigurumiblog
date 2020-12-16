@@ -8,7 +8,7 @@ namespace merigurumiblogFront.ViewComponents{
             _categoryApiService=categoryApiService;
         }
         public IViewComponentResult Invoke(){
-            return View(_categoryApiService.GetAllAsync().Result);
+            return View(_categoryApiService.GetAllWithBlogsCount().Result);
         }
     }
 }

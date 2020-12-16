@@ -7,3 +7,6 @@ C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DT
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DTO\obj\Debug\netcoreapp3.1\merigurumi.blog.DTO.csproj.CoreCompileInputs.cache
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DTO\obj\Debug\netcoreapp3.1\merigurumi.blog.DTO.dll
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DTO\obj\Debug\netcoreapp3.1\merigurumi.blog.DTO.pdb
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DTO\bin\Debug\netcoreapp3.1\merigurumi.blog.Entities.dll
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DTO\bin\Debug\netcoreapp3.1\merigurumi.blog.Entities.pdb
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.DTO\obj\Debug\netcoreapp3.1\merigurumi.blog.DTO.csproj.CopyComplete

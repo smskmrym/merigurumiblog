@@ -74,3 +74,6 @@ C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFron
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFront\obj\Debug\netcoreapp3.1\merigurumiblogFront.dll
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFront\obj\Debug\netcoreapp3.1\merigurumiblogFront.pdb
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFront\obj\Debug\netcoreapp3.1\merigurumiblogFront.genruntimeconfig.cache
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFront\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\GetCategoryName\default.cshtml.g.cs
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFront\obj\Debug\netcoreapp3.1\Razor\Views\Account\SignIn.cshtml.g.cs
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFront\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs

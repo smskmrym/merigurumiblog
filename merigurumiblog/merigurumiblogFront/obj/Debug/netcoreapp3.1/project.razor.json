@@ -10256,6 +10256,41 @@
         }
       },
       {
+        "HashCode": 1656406577,
+        "Kind": "ITagHelper",
+        "Name": "merigurumiblogFront.TagHelpers.ImageTagHelper",
+        "AssemblyName": "merigurumiblogFront",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "getblogimage"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "id",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "blog-image-type",
+            "TypeName": "merigurumiblogFront.Enums.BlogImageType",
+            "IsEnum": true,
+            "Metadata": {
+              "Common.PropertyName": "BlogImageType"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "merigurumiblogFront.TagHelpers.ImageTagHelper"
+        }
+      },
+      {
         "HashCode": 1226202186,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper",
@@ -12439,6 +12474,38 @@
         }
       },
       {
+        "HashCode": -1429577810,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__GetCategoryNameViewComponentTagHelper",
+        "AssemblyName": "merigurumiblogFront",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:get-category-name",
+            "Attributes": [
+              {
+                "Name": "category-id"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "MVC.ViewComponent",
+            "Name": "category-id",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "categoryId"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__GetCategoryNameViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "GetCategoryName"
+        }
+      },
+      {
         "HashCode": 1912741130,
         "Kind": "Components.Bind",
         "Name": "Bind",
@@ -14409,8 +14476,18 @@
   "RootNamespace": "merigurumiblogFront",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Views\\Shared\\Components\\GetCategoryName\\default.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\GetCategoryName\\default.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Views\\Shared\\Components\\CategoryList\\default.cshtml",
       "TargetPath": "Views\\Shared\\Components\\CategoryList\\default.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14426,6 +14503,11 @@
     {
       "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Views\\Account\\SignIn.cshtml",
+      "TargetPath": "Views\\Account\\SignIn.cshtml",
       "FileKind": "mvc"
     },
     {

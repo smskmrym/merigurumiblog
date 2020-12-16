@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "merigurumi.blog.DTO/1.0.0": {
+        "dependencies": {
+          "merigurumi.blog.Entities": "1.0.0"
+        },
         "runtime": {
           "merigurumi.blog.DTO.dll": {}
+        }
+      },
+      "merigurumi.blog.Entities/1.0.0": {
+        "runtime": {
+          "merigurumi.blog.Entities.dll": {}
         }
       }
     }
   },
   "libraries": {
     "merigurumi.blog.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "merigurumi.blog.Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -9,5 +9,6 @@ namespace merigurumi.blog.Business.Interfaces
     public interface ICategoryService : IGenericService<Category>
     {
         Task<List<Category>> GetAllSortedByIdAsync();
+        Task<List<Category>> GetAllWithCategoryBlogsAsync();
     }
 }

@@ -5,11 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ValidationRules\" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.3.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\merigurumi.blog.DataAccess\merigurumi.blog.DataAccess.csproj" />
+    <ProjectReference Include="..\merigurumi.blog.DTO\merigurumi.blog.DTO.csproj" />
     <ProjectReference Include="..\merigurumi.blog.Entities\merigurumi.blog.Entities.csproj" />
   </ItemGroup>
 
