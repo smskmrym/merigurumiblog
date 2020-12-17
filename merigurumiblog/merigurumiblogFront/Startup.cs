@@ -18,7 +18,7 @@ namespace merigurumiblogFront
             services.AddHttpClient<IBlogApiService,BlogApiManager>();
             services.AddHttpClient<ICategoryApiService,CategoryApiManager>();
             services.AddHttpClient<IImageApiService,ImageApiManager>();
-            services.AddHttpClient<IAuthApiService,AuthApiManager>();
+            services.AddHttpClient<IAuthApiService, AuthApiManager>();
             
             services.AddControllersWithViews();
         }

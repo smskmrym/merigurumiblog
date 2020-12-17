@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using AutoMapper;
 using merigurumi.blog.Business.Interfaces;
@@ -48,6 +49,7 @@ namespace merigurumi.blog.WebApi.Controllers
         public async Task<IActionResult> Create([FromForm] BlogAddModel blogAddModel)
         {
             var uploadModel = await UploadFileAsync(blogAddModel.Image, "image/jpeg");
+            User.Claims.Where(I => I.Type == ClaimTypes.NameIdentifier);
             if (uploadModel.UploadState == UploadState.Success)
             {
                 blogAddModel.ImagePath = uploadModel.NewName;
@@ -69,8 +71,6 @@ namespace merigurumi.blog.WebApi.Controllers
         [Authorize]
         [ValidModel]
         [ServiceFilter(typeof(ValidId<Blog>))]
-
-
         public async Task<IActionResult> Update(int id, [FromForm] BlogUpdateModel blogUpdateModel)
         {
             if (id != blogUpdateModel.Id)
@@ -108,8 +108,6 @@ namespace merigurumi.blog.WebApi.Controllers
         [HttpDelete("{id}")]
         [Authorize]
         [ServiceFilter(typeof(ValidId<Blog>))]
-
-
         public async Task<IActionResult> Delete(int id)
         {
             await _blogService.RemoveAsync(new Blog { Id = id });

@@ -33,6 +33,7 @@ namespace merigurumi.blog.Business.Containers.MicrosoftIoC
 
             services.AddScoped<IJwtService, JwtManager>();
 
+
             services.AddTransient<IValidator<AppUserLoginDto>, AppUserLoginValidator>();
             services.AddTransient<IValidator<CategoryAddDto>, CategoryAddValidator>();
             services.AddTransient<IValidator<CategoryBlogDto>, CategoryBlogValidator>();

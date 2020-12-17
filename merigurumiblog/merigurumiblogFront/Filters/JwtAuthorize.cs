@@ -8,14 +8,15 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
 
 namespace merigurumiblogFront.Filters{
-    public class JwtAuthorize :ActionFilterAttribute{
+    public class JwtAuthorize :ActionFilterAttribute
+    {
         public override void OnActionExecuting(ActionExecutingContext context)
         {
           var token= context.HttpContext.Session.GetString("token");
         
           if(string.IsNullOrWhiteSpace(token))
           {
-              context.Result=new RedirectToActionResult("SignIn","Account", new {area=""});
+              context.Result=new RedirectToActionResult("SignIn","Account", new {@area=""});
           }
           else{
               using var httpClient=new HttpClient();
