@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using merigurumi.blog.DTO.DTOs.BlogDtos;
 using merigurumi.blog.DTO.DTOs.CategoryDtos;
+using merigurumi.blog.DTO.DTOs.CommentDtos;
 using merigurumi.blog.Entities.concrete;
 using merigurumi.blog.WebApi.Models;
 using System;
@@ -32,10 +33,8 @@ namespace merigurumi.blog.WebApi.Mapping.AutoMapperProfile
             CreateMap<CategoryUpdateDto, Category>();
             CreateMap<Category, CategoryUpdateDto>();
 
-
-
-
-
+            CreateMap<Comment, CommentListDto>();
+            CreateMap<CommentListDto, Comment>();
 
         }
 

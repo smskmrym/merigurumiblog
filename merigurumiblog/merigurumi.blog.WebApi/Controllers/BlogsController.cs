@@ -8,6 +8,8 @@ using AutoMapper;
 using merigurumi.blog.Business.Interfaces;
 using merigurumi.blog.DTO.DTOs.BlogDtos;
 using merigurumi.blog.DTO.DTOs.CategoryBlogDtos;
+using merigurumi.blog.DTO.DTOs.CategoryDtos;
+using merigurumi.blog.DTO.DTOs.CommentDtos;
 using merigurumi.blog.Entities.concrete;
 using merigurumi.blog.WebApi.CustomFilters;
 using merigurumi.blog.WebApi.Enams;
@@ -24,8 +26,10 @@ namespace merigurumi.blog.WebApi.Controllers
     {
         private readonly IBlogService _blogService;
         private readonly IMapper _mapper;
-        public BlogsController(IBlogService blogService, IMapper mapper)
+        private readonly ICommentService _commentService;
+        public BlogsController(IBlogService blogService, IMapper mapper, ICommentService commentService)
         {
+            _commentService = commentService;
             _blogService = blogService;
             _mapper = mapper;
         }
@@ -127,11 +131,34 @@ namespace merigurumi.blog.WebApi.Controllers
             await _blogService.RemoveFromCategoryAsync(categoryBlogDto);
             return NoContent();
         }
-        [HttpGet("[action]/{id}")]
+        [HttpGet("{id}/[action]")]
         [ServiceFilter(typeof(ValidId<Category>))]
         public async Task<IActionResult> GetAllByCategoryId(int id)
         {
             return Ok(await _blogService.GetAllByCategoryIdAsync(id));
+        }
+        [HttpGet("{id}/[action]")]
+        [ServiceFilter(typeof(ValidId<Blog>))]
+
+        public async Task<IActionResult> GetCategories(int id)
+        {
+            return Ok(_mapper.Map<List<CategoryListDto>>(await _blogService.GetCategoriesAsync(id)));
+        }
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetLastFive()
+        {
+            return Ok(_mapper.Map<List<BlogListDto>>(await _blogService.GetLastFiveAsync()));
+        }
+
+        [HttpGet("{id}/action")]
+        public async Task<IActionResult> GetComments([FromRoute]int id, [FromQuery]int? parentCommentId)
+        {
+            return Ok(_mapper.Map<List<CommentListDto>>(await _commentService.GetAllWithSubCommentsAsync(id, parentCommentId)));
+        }
+        [HttpGet("[action]")]
+        public async Task<IActionResult> Search([FromQuery]string s)
+        {
+            return Ok(_mapper.Map<List<BlogListDto>>(await _blogService.SearchAsync(s)));
         }
     }
 }

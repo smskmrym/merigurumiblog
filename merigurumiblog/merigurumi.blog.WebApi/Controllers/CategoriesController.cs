@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using merigurumi.blog.Business.Interfaces;
+using merigurumi.blog.Business.Tools.LogTool;
 using merigurumi.blog.DTO.DTOs.CategoryDtos;
 using merigurumi.blog.Entities.concrete;
 using merigurumi.blog.WebApi.CustomFilters;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,8 +21,10 @@ namespace merigurumi.blog.WebApi.Controllers
     {
         private readonly IMapper _mapper;
         private readonly ICategoryService _categoryService;
-        public  CategoriesController(IMapper mapper, ICategoryService categoryService)
+        private readonly ICustomLogger _customLogger;
+        public  CategoriesController(IMapper mapper, ICategoryService categoryService, ICustomLogger customLogger)
         {
+            _customLogger = customLogger;
             _mapper = mapper;
             _categoryService = categoryService;
         }
@@ -63,22 +67,32 @@ namespace merigurumi.blog.WebApi.Controllers
             await _categoryService.RemoveAsync(new Category { Id = id });
             return NoContent();
         }
+
         [HttpGet("[action]")]
         public async Task<IActionResult> GetWithBlogsCount()
         {
-            var categories= await _categoryService.GetAllWithCategoryBlogsAsync();
+            var categories = await _categoryService.GetAllWithCategoryBlogsAsync();
             List<CategoryWithBlogsCountDto> listCategory = new List<CategoryWithBlogsCountDto>();
-           
-            foreach(var category in categories)
+
+            foreach (var category in categories)
             {
-                CategoryWithBlogsCountDto dto = new CategoryWithBlogsCountDto();
-                dto.CategoryName = category.Name;
-                dto.CategoryId = category.Id;
-                dto.BlogCount = category.CategoryBlogs.Count;
+                CategoryWithBlogsCountDto dto = new CategoryWithBlogsCountDto
+                {
+                    CategoryName = category.Name,
+                    CategoryId = category.Id,
+                    BlogsCount = category.CategoryBlogs.Count
+                };
 
                 listCategory.Add(dto);
             }
             return Ok(listCategory);
+        }
+        [Route("/Error")]
+        public IActionResult Error()
+        {
+            var errorInfo= HttpContext.Features.Get<IExceptionHandlerPathFeature>();
+            _customLogger.LogError($"\nHatanın oluştuğu yer:{errorInfo.Path}\n Hata Mesajı : {errorInfo.Error.Message} \n Stack Trace: {errorInfo.Error.StackTrace}");
+            return Problem(detail: "bir hata oluştu");
         }
     }
 }

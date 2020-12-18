@@ -2,6 +2,7 @@
 using merigurumi.blog.Business.concrete;
 using merigurumi.blog.Business.Interfaces;
 using merigurumi.blog.Business.Tools.JWTTool;
+using merigurumi.blog.Business.Tools.LogTool;
 using merigurumi.blog.Business.ValidationRules.FluentValidation;
 using merigurumi.blog.DataAccess.concrete.EFCore.Repositories;
 using merigurumi.blog.DataAccess.Interfaces;
@@ -31,7 +32,11 @@ namespace merigurumi.blog.Business.Containers.MicrosoftIoC
             services.AddScoped<IAppUserService, AppUserManager>();
             services.AddScoped<IAppUserDal, EfAppUserRepository>();
 
+            services.AddScoped<ICommentService, CommentManager>();
+            services.AddScoped<ICommentDal, EfCommentRepository>();
+
             services.AddScoped<IJwtService, JwtManager>();
+            services.AddScoped<ICustomLogger, NLogAdapter>();
 
 
             services.AddTransient<IValidator<AppUserLoginDto>, AppUserLoginValidator>();

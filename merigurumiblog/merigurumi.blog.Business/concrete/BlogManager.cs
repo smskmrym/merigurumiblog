@@ -54,5 +54,20 @@ namespace merigurumi.blog.Business.concrete
         {
             return await _blogDal.GetAllByCategoryIdAsync(categoryId);
         }
+
+        public async Task<List<Category>> GetCategoriesAsync(int blogId)
+        {
+            return await _blogDal.GetCategoriesAsync(blogId);
+        }
+
+        public async Task<List<Blog>> GetLastFiveAsync()
+        {
+            return await _blogDal.GetLastFiveAsync();
+        }
+
+        public async Task<List<Blog>> SearchAsync(string searchString)
+        {
+          return await _blogDal.GetAllAsync(I => I.Title.Contains(searchString) || I.ShortDescription.Contains(searchString) || I.Description.Contains(searchString), I => I.PostedTime);
+        }
     }
 }

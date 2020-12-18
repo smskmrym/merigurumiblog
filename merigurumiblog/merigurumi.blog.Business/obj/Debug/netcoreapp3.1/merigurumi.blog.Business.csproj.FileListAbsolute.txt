@@ -13,4 +13,5 @@ C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Bu
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\obj\Debug\netcoreapp3.1\merigurumi.blog.Business.pdb
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\bin\Debug\netcoreapp3.1\merigurumi.blog.DTO.dll
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\bin\Debug\netcoreapp3.1\merigurumi.blog.DTO.pdb
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\bin\Debug\netcoreapp3.1\NLog.config
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumi.blog.Business\obj\Debug\netcoreapp3.1\merigurumi.blog.Business.csproj.CoreCompileInputs.cache
