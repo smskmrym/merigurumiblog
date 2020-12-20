@@ -19,6 +19,7 @@ namespace merigurumiblogFront.Controllers
         }
 
         public async Task<IActionResult> BlogDetail(int id){
+            ViewBag.Comments = await _blogApiService.GetCommentsAsync(id,null);
             return View(await _blogApiService.GetByIdAsync(id));
         }
     }

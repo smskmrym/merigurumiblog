@@ -36,6 +36,9 @@ namespace merigurumi.blog.WebApi.Mapping.AutoMapperProfile
             CreateMap<Comment, CommentListDto>();
             CreateMap<CommentListDto, Comment>();
 
+            CreateMap<Comment, CommentAddDto>();
+            CreateMap<CommentAddDto, Comment>();
+
         }
 
     }

@@ -9,6 +9,7 @@ using merigurumi.blog.DataAccess.Interfaces;
 using merigurumi.blog.DTO.DTOs.AppUserDtos;
 using merigurumi.blog.DTO.DTOs.CategoryBlogDtos;
 using merigurumi.blog.DTO.DTOs.CategoryDtos;
+using merigurumi.blog.DTO.DTOs.CommentDtos;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -43,6 +44,7 @@ namespace merigurumi.blog.Business.Containers.MicrosoftIoC
             services.AddTransient<IValidator<CategoryAddDto>, CategoryAddValidator>();
             services.AddTransient<IValidator<CategoryBlogDto>, CategoryBlogValidator>();
             services.AddTransient<IValidator<CategoryUpdateDto>, CategoryUpdateValidator>();
+            services.AddTransient<IValidator<CommentAddDto>, CommentAddValidator >();
         }
     }
 }

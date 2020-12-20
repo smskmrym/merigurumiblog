@@ -9,8 +9,8 @@ namespace merigurumiblogFront.ViewComponents{
             _categoryApiService=categoryApiService;
         }
         public IViewComponentResult Invoke(int categoryId){
+           
             return View(_categoryApiService.GetByIdAsync(categoryId).Result);
         }
-
     }
 }
