@@ -53,7 +53,6 @@ namespace merigurumi.blog.WebApi.Controllers
         public async Task<IActionResult> Create([FromForm] BlogAddModel blogAddModel)
         {
             var uploadModel = await UploadFileAsync(blogAddModel.Image, "image/jpeg");
-            User.Claims.Where(I => I.Type == ClaimTypes.NameIdentifier);
             if (uploadModel.UploadState == UploadState.Success)
             {
                 blogAddModel.ImagePath = uploadModel.NewName;
@@ -114,7 +113,7 @@ namespace merigurumi.blog.WebApi.Controllers
         [ServiceFilter(typeof(ValidId<Blog>))]
         public async Task<IActionResult> Delete(int id)
         {
-            await _blogService.RemoveAsync(await _blogService.FindByIdAsync(id));
+            await _blogService.RemoveAsync(new Blog { Id = id });
             return NoContent();
         }
 
@@ -126,7 +125,7 @@ namespace merigurumi.blog.WebApi.Controllers
             return Created("", categoryBlogDto);
         }
         [HttpDelete("[action]")]
-        public async Task<IActionResult> RemoveFromCategory(CategoryBlogDto categoryBlogDto)
+        public async Task<IActionResult> RemoveFromCategory([FromQuery]CategoryBlogDto categoryBlogDto)
         {
             await _blogService.RemoveFromCategoryAsync(categoryBlogDto);
             return NoContent();
@@ -165,7 +164,7 @@ namespace merigurumi.blog.WebApi.Controllers
         {
             commentAddDto.PostedTime = DateTime.Now;
             await _commentService.AddAsync(_mapper.Map<Comment>(commentAddDto));
-            return Created("",commentAddDto);
+            return Created("", commentAddDto);
         }
 
     }

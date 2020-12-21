@@ -34,6 +34,7 @@ namespace merigurumiblogFront
             app.UseRouting();
             app.UseSession();
             app.UseStaticFiles();
+           
 
             app.UseEndpoints(endpoints =>
             {

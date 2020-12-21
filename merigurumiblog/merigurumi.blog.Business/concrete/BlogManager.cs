@@ -30,7 +30,7 @@ namespace merigurumi.blog.Business.concrete
         public async Task AddToCategoryAsync(CategoryBlogDto categoryBlogDto)
         {
             var control = await _categoryBlogService.GetAsync(I => I.CategoryId == categoryBlogDto.CategoryId && I.BlogId == categoryBlogDto.BlogId);
-            if (control != null)
+            if (control == null)
             {
                 await _categoryBlogService.AddAsync(new CategoryBlog
                 {
