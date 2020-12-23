@@ -14,4 +14,12 @@ Kısaca bir örnek;
 
 Ben bir blog sitesi tasarlıyorum. Bu sitede bu işi yapan insanların üye olabilecekleri, yaptıkları işlerin resimlerini ve tariflerini  ilgili kategoriye yükleyebileceği, düzenleyebileceği veya istediklerinde silebilecekleri, birbirlerinin işlerine yorum yapabilecekleri bir blog sitesi olmasını hedefliyorum. 
 
-Yakında sayfa görünümlerimi de paylaşacağım.
+Admin panelinden birkaç görüntü;
+
+<a href="https://ibb.co/BNY7Vdr"><img src="https://i.ibb.co/X8GdZN3/11.png" alt="11" border="0"></a><br /><a target='_blank' href='https://tr.imgbb.com/'></a><br />
+
+Blog sayfa görüntüsü;
+
+<a href="https://ibb.co/jvzrh2J"><img src="https://i.ibb.co/RpND2mj/12.png" alt="12" border="0"></a><br /><a target='_blank' href='https://tr.imgbb.com/'></a><br />
+
+Henüz tamamlanmayan birçok kısım var. Gerekli eklemeleri yaptıkça paylaşacağım.
