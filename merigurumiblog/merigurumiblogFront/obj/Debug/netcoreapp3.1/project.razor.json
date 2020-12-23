@@ -14486,8 +14486,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Areas\\Admin\\Views\\Blog\\Index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Blog\\Index.cshtml",
+      "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Areas\\Admin\\Views\\Blog\\index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Blog\\index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14521,8 +14521,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Areas\\Admin\\Views\\Category\\Index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Category\\Index.cshtml",
+      "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Areas\\Admin\\Views\\Category\\index.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Category\\index.cshtml",
       "FileKind": "mvc"
     },
     {

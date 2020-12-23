@@ -23,12 +23,6 @@ namespace merigurumi.blog.DataAccess.concrete.EFCore.Mapping
             builder.HasMany(I => I.CategoryBlogs).WithOne(I => I.Blog).HasForeignKey(I => I.BlogId);
 
 
-
-
-
-
-
-
         }
     }
 }

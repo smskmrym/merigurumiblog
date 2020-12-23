@@ -8,7 +8,7 @@ namespace merigurumi.blog.Business.Stringinfos
     {
         public const string Issuer = "http://localhost:60946";
         public const string Audience = "http://localhost:5000";
-        public const string SecurityKey = "MeriMeri";
+        public const string SecurityKey = "MeryemMeryemMeryem1";
         public const double Expires = 40;
     }
 }
