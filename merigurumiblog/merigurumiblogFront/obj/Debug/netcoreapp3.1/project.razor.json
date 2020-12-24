@@ -12506,6 +12506,55 @@
         }
       },
       {
+        "HashCode": 1285755561,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__SearchViewComponentTagHelper",
+        "AssemblyName": "merigurumiblogFront",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:search",
+            "Attributes": [
+              {
+                "Name": "s"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "MVC.ViewComponent",
+            "Name": "s",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "s"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__SearchViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "Search"
+        }
+      },
+      {
+        "HashCode": 1137597263,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__LastFiveBlogViewComponentTagHelper",
+        "AssemblyName": "merigurumiblogFront",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:last-five-blog"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__LastFiveBlogViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "LastFiveBlog"
+        }
+      },
+      {
         "HashCode": 1912741130,
         "Kind": "Components.Bind",
         "Name": "Bind",
@@ -14496,8 +14545,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Views\\Shared\\Components\\LastFiveBlog\\default.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\LastFiveBlog\\default.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Areas\\Admin\\Views\\Home\\Index.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Areas\\Admin\\Views\\Blog\\AssignCategory.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Blog\\AssignCategory.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Views\\Shared\\Components\\Search\\default.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\Search\\default.cshtml",
       "FileKind": "mvc"
     },
     {

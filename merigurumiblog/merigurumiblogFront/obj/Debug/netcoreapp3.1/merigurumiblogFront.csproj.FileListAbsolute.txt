@@ -86,3 +86,6 @@ C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFron
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFront\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFront\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\create.cshtml.g.cs
 C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFront\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\update.cshtml.g.cs
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFront\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Blog\AssignCategory.cshtml.g.cs
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFront\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\LastFiveBlog\default.cshtml.g.cs
+C:\Users\meri\Documents\project\merigurumiblog\merigurumiblog\merigurumiblogFront\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Search\default.cshtml.g.cs
