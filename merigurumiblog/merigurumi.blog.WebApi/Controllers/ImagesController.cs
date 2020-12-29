@@ -17,14 +17,14 @@ namespace merigurumi.blog.WebApi.Controllers
         {
             _blogService = blogService;
         }
+
         [HttpGet("[action]/{id}")]
         public async Task<IActionResult> GetBlogImageById(int id)
         {
             var blog = await _blogService.FindByIdAsync(id);
             if (string.IsNullOrWhiteSpace(blog.ImagePath))
-                return NotFound("Resim Yok");
-
-            return File($"/img/{blog.ImagePath}","image/jpeg");
+                return NotFound("resim yok");
+            return File($"/img/{blog.ImagePath}", "image/jpeg");
         }
     }
 }

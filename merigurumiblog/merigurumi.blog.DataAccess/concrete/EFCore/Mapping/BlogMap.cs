@@ -19,7 +19,8 @@ namespace merigurumi.blog.DataAccess.concrete.EFCore.Mapping
             builder.Property(I => I.Description).HasColumnType("ntext");
             builder.Property(I => I.ImagePath).HasMaxLength(300);
 
-            builder.HasMany(I => I.Comments).WithOne(I=>I.Blog).HasForeignKey(I=>I.BlogId);
+            builder.HasMany(I => I.Comments).WithOne(I => I.Blog).HasForeignKey(I => I.BlogId);
+
             builder.HasMany(I => I.CategoryBlogs).WithOne(I => I.Blog).HasForeignKey(I => I.BlogId);
 
 

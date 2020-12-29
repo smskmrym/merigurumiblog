@@ -33,6 +33,7 @@ namespace merigurumi.blog.WebApi.Mapping.AutoMapperProfile
             CreateMap<CategoryUpdateDto, Category>();
             CreateMap<Category, CategoryUpdateDto>();
 
+
             CreateMap<Comment, CommentListDto>();
             CreateMap<CommentListDto, Comment>();
 

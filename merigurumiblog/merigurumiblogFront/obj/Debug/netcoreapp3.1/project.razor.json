@@ -14550,11 +14550,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Areas\\Admin\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\meri\\Documents\\project\\merigurumiblog\\merigurumiblog\\merigurumiblogFront\\Areas\\Admin\\Views\\Blog\\AssignCategory.cshtml",
       "TargetPath": "Areas\\Admin\\Views\\Blog\\AssignCategory.cshtml",
       "FileKind": "mvc"

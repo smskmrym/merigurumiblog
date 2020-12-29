@@ -1,3 +1,7 @@
+@{
+  var active= TempData["active"].ToString();
+}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,11 +15,12 @@
   <title>Simple Sidebar - Start Bootstrap Template</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/simplex.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="/css/simple-sidebar.css" rel="stylesheet">
-    @RenderSection("Css", false)
+  @RenderSection("Css",false)
+  
 </head>
 
 <body>
@@ -24,14 +29,15 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Start Bootstrap </div>
+      <div class="sidebar-heading">
+         <img  src="/img/user-group-icon.png" alt="AdminPanel" class="w-100 img-fluid img-thumbnail"/>
+         <h5 class="pt-1">Admin Panel</h5>
+      </div>
       <div class="list-group list-group-flush">
-        <a asp-action="Index" asp-controller="Blog" asp-area="Admin" class="list-group-item list-group-item-action bg-light">Blog İşlemleri</a>
-        <a asp-action="Index" asp-controller="Category" asp-area="Admin" class="list-group-item list-group-item-action bg-light">Kategori İşlemleri</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+        <a asp-action="Index" asp-controller="Blog" asp-area="Admin" class="list-group-item list-group-item-action @(active=="blog"?"active":"")">Blog İşlemleri</a>
+        <a asp-action="Index" asp-controller="Category" asp-area="Admin" class="list-group-item list-group-item-action @(active=="category"?"active":"")">Kategori İşlemleri</a>
+       
+        <a asp-action="SignOut" asp-controller="Category" class="list-group-item list-group-item-action ">Çıkış Yap</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -40,13 +46,14 @@
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+        <button class="btn btn-primary" id="menu-toggle"> Menu</button>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
         </div>
       </nav>
 
@@ -57,12 +64,11 @@
     <!-- /#page-content-wrapper -->
 
   </div>
-  <!-- /#wrapper -->
 
   <!-- Bootstrap core JavaScript -->
   <script src="/lib/jquery/jquery.min.js"></script>
   <script src="/lib/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
-    @RenderSection("JavaScript", false)
+   @RenderSection("JavaScript",false)
   <!-- Menu Toggle Script -->
   <script>
     $("#menu-toggle").click(function(e) {

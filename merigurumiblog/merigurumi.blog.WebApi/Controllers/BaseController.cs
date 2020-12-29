@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using merigurumi.blog.WebApi.Enams;
+using merigurumi.blog.WebApi.Enums;
 using merigurumi.blog.WebApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,7 +21,7 @@ namespace merigurumi.blog.WebApi.Controllers
             {
                 if (file.ContentType != contentType)
                 {
-                    uploadModel.ErrorMessage = "desteklenmeyen dosya türü";
+                    uploadModel.ErrorMessage = "uygunsuz dosya türü";
                     uploadModel.UploadState = UploadState.Error;
                     return uploadModel;
                 }
@@ -35,10 +35,10 @@ namespace merigurumi.blog.WebApi.Controllers
                     uploadModel.NewName = newName;
                     uploadModel.UploadState = UploadState.Success;
                     return uploadModel;
-
                 }
             }
-            uploadModel.ErrorMessage = "Dosya Yok";
+
+            uploadModel.ErrorMessage = "Dosya yok";
             uploadModel.UploadState = UploadState.NotExist;
             return uploadModel;
 

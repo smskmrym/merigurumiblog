@@ -29,6 +29,7 @@ namespace merigurumi.blog.DataAccess.concrete.EFCore.Repositories
         public async Task<List<TEntity>> GetAllAsync()
         {
             using var context = new MerigurumiblogContext();
+
             return await context.Set<TEntity>().ToListAsync();
         }
 
@@ -37,11 +38,13 @@ namespace merigurumi.blog.DataAccess.concrete.EFCore.Repositories
             using var context = new MerigurumiblogContext();
             return await context.Set<TEntity>().Where(filter).ToListAsync();
         }
+
         public async Task<List<TEntity>> GetAllAsync<TKey>(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, TKey>> keySelector)
         {
             using var context = new MerigurumiblogContext();
             return await context.Set<TEntity>().Where(filter).OrderByDescending(keySelector).ToListAsync();
         }
+
         public async Task<List<TEntity>> GetAllAsync<TKey>(Expression<Func<TEntity, TKey>> keySelector)
         {
             using var context = new MerigurumiblogContext();
@@ -66,7 +69,6 @@ namespace merigurumi.blog.DataAccess.concrete.EFCore.Repositories
             using var context = new MerigurumiblogContext();
             context.Update(entity);
             await context.SaveChangesAsync();
-
         }
     }
 }

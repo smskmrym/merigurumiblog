@@ -18,8 +18,8 @@ namespace merigurumiblogFront
             services.AddHttpClient<IBlogApiService,BlogApiManager>();
             services.AddHttpClient<ICategoryApiService,CategoryApiManager>();
             services.AddHttpClient<IImageApiService,ImageApiManager>();
-            services.AddHttpClient<IAuthApiService, AuthApiManager>();
-            
+            services.AddHttpClient<IAuthApiService,AuthApiManager>();
+         
             services.AddControllersWithViews();
         }
 
@@ -35,10 +35,9 @@ namespace merigurumiblogFront
             app.UseSession();
             app.UseStaticFiles();
            
-
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(name:"areas",pattern:"{area}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(name:"areas",pattern:"{area}/{controller=Blog}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute(name:"default",pattern:"{controller=Home}/{action=Index}/{id?}");
             });
         }

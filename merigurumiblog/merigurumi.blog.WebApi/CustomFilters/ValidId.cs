@@ -16,18 +16,21 @@ namespace merigurumi.blog.WebApi.CustomFilters
         {
             _genericService = genericService;
         }
+
         public void OnActionExecuted(ActionExecutedContext context)
         {
         }
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
-           var dictionary = context.ActionArguments.Where(I => I.Key == "id").FirstOrDefault();
+            var dictionary = context.ActionArguments.Where(I => I.Key == "id").FirstOrDefault();
+
             var id = int.Parse(dictionary.Value.ToString());
-             var entity = _genericService.FindByIdAsync(id).Result;
-            if(entity==null)
+
+            var entity = _genericService.FindByIdAsync(id).Result;
+            if (entity == null)
             {
-                context.Result = new NotFoundObjectResult($"{id} değerine sahip nesne bulunamadı");
+                context.Result = new NotFoundObjectResult($"{id} degerine sahip nesne bulunamadı");
             }
         }
     }

@@ -12,7 +12,7 @@ using merigurumi.blog.DTO.DTOs.CategoryDtos;
 using merigurumi.blog.DTO.DTOs.CommentDtos;
 using merigurumi.blog.Entities.concrete;
 using merigurumi.blog.WebApi.CustomFilters;
-using merigurumi.blog.WebApi.Enams;
+using merigurumi.blog.WebApi.Enums;
 using merigurumi.blog.WebApi.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -33,7 +33,6 @@ namespace merigurumi.blog.WebApi.Controllers
             _blogService = blogService;
             _mapper = mapper;
         }
-
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -68,6 +67,7 @@ namespace merigurumi.blog.WebApi.Controllers
             {
                 return BadRequest(uploadModel.ErrorMessage);
             }
+
         }
 
         [HttpPut("{id}")]
@@ -80,6 +80,7 @@ namespace merigurumi.blog.WebApi.Controllers
                 return BadRequest("geçersiz id");
 
             var uploadModel = await UploadFileAsync(blogUpdateModel.Image, "image/jpeg");
+
             if (uploadModel.UploadState == UploadState.Success)
             {
                 var updatedBlog = await _blogService.FindByIdAsync(blogUpdateModel.Id);
@@ -88,6 +89,7 @@ namespace merigurumi.blog.WebApi.Controllers
                 updatedBlog.Title = blogUpdateModel.Title;
                 updatedBlog.Description = blogUpdateModel.Description;
                 updatedBlog.ImagePath = uploadModel.NewName;
+
 
                 await _blogService.UpdateAsync(updatedBlog);
                 return NoContent();
@@ -107,7 +109,6 @@ namespace merigurumi.blog.WebApi.Controllers
                 return BadRequest(uploadModel.ErrorMessage);
             }
         }
-
         [HttpDelete("{id}")]
         [Authorize]
         [ServiceFilter(typeof(ValidId<Blog>))]
@@ -124,17 +125,20 @@ namespace merigurumi.blog.WebApi.Controllers
             await _blogService.AddToCategoryAsync(categoryBlogDto);
             return Created("", categoryBlogDto);
         }
+
         [HttpDelete("[action]")]
-        public async Task<IActionResult> RemoveFromCategory([FromQuery]CategoryBlogDto categoryBlogDto)
+        public async Task<IActionResult> RemoveFromCategory([FromQuery] CategoryBlogDto categoryBlogDto)
         {
             await _blogService.RemoveFromCategoryAsync(categoryBlogDto);
             return NoContent();
         }
+
         [HttpGet("[action]/{id}")]
         [ServiceFilter(typeof(ValidId<Category>))]
         public async Task<IActionResult> GetAllByCategoryId(int id)
         {
             return Ok(await _blogService.GetAllByCategoryIdAsync(id));
+
         }
         [HttpGet("{id}/[action]")]
         [ServiceFilter(typeof(ValidId<Blog>))]
@@ -142,22 +146,25 @@ namespace merigurumi.blog.WebApi.Controllers
         {
             return Ok(_mapper.Map<List<CategoryListDto>>(await _blogService.GetCategoriesAsync(id)));
         }
+
         [HttpGet("[action]")]
         public async Task<IActionResult> GetLastFive()
         {
             return Ok(_mapper.Map<List<BlogListDto>>(await _blogService.GetLastFiveAsync()));
         }
 
-        [HttpGet("{id}/action")]
-        public async Task<IActionResult> GetComments([FromRoute]int id, [FromQuery]int? parentCommentId)
+        [HttpGet("{id}/[action]")]
+        public async Task<IActionResult> GetComments([FromRoute] int id, [FromQuery] int? parentCommentId)
         {
             return Ok(_mapper.Map<List<CommentListDto>>(await _commentService.GetAllWithSubCommentsAsync(id, parentCommentId)));
         }
+
         [HttpGet("[action]")]
-        public async Task<IActionResult> Search([FromQuery]string s)
+        public async Task<IActionResult> Search([FromQuery] string s)
         {
             return Ok(_mapper.Map<List<BlogListDto>>(await _blogService.SearchAsync(s)));
         }
+
         [HttpPost("[action]")]
         [ValidModel]
         public async Task<IActionResult> AddComment(CommentAddDto commentAddDto)

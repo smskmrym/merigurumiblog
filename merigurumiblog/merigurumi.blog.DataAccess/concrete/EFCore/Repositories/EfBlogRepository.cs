@@ -25,16 +25,15 @@ namespace merigurumi.blog.DataAccess.concrete.EFCore.Repositories
                 AppUserId = I.blog.AppUserId,
                 CategoryBlogs = I.blog.CategoryBlogs,
                 Comments = I.blog.Comments,
-                Description=I.blog.Description,
+                Description = I.blog.Description,
                 Id = I.blog.Id,
                 ImagePath = I.blog.ImagePath,
                 PostedTime = I.blog.PostedTime,
                 ShortDescription = I.blog.ShortDescription,
                 Title = I.blog.Title
-
-
             }).ToListAsync();
         }
+
         public async Task<List<Category>> GetCategoriesAsync(int blogId)
         {
             using var context = new MerigurumiblogContext();

@@ -11,6 +11,7 @@ namespace merigurumiblogFront.Areas.Admin.Controllers
     public class BlogController : Controller
     {
         private readonly IBlogApiService _blogApiService;
+
         public BlogController(IBlogApiService blogApiService)
         {
             _blogApiService = blogApiService;
@@ -18,15 +19,20 @@ namespace merigurumiblogFront.Areas.Admin.Controllers
         [JwtAuthorize]
         public async Task<IActionResult> Index()
         {
+            TempData["active"] = "blog";
             return View(await _blogApiService.GetAllAsync());
         }
+
         public IActionResult Create()
         {
+            TempData["active"] = "blog";
             return View(new BlogAddModel());
         }
+
         [HttpPost]
         public async Task<IActionResult> Create(BlogAddModel model)
         {
+            TempData["active"] = "blog";
             if (ModelState.IsValid)
             {
                 await _blogApiService.AddAsync(model);
@@ -34,8 +40,10 @@ namespace merigurumiblogFront.Areas.Admin.Controllers
             }
             return View(model);
         }
+
         public async Task<IActionResult> Update(int id)
         {
+            TempData["active"] = "blog";
             var blogList = await _blogApiService.GetByIdAsync(id);
 
             return View(new BlogUpdateModel
@@ -49,6 +57,7 @@ namespace merigurumiblogFront.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(BlogUpdateModel model)
         {
+            TempData["active"] = "blog";
             if (ModelState.IsValid)
             {
                 await _blogApiService.UpdateAsync(model);
@@ -56,19 +65,23 @@ namespace merigurumiblogFront.Areas.Admin.Controllers
             }
             return View(model);
         }
+
         public async Task<IActionResult> Delete(int id)
         {
+            TempData["active"] = "blog";
             await _blogApiService.DeleteAsync(id);
             return RedirectToAction("Index");
         }
+
         public async Task<IActionResult> AssignCategory(int id, [FromServices] ICategoryApiService categoryApiService)
         {
-
             TempData["active"] = "blog";
             var categories = await categoryApiService.GetAllAsync();
             var blogCategories = await _blogApiService.GetCategoriesAsync(id);
 
             TempData["blogId"] = id;
+
+            // GetRolesAsync() IList<string>
 
             List<AssignCategoryModel> list = new List<AssignCategoryModel>();
 
@@ -84,7 +97,6 @@ namespace merigurumiblogFront.Areas.Admin.Controllers
             }
 
             return View(list);
-
         }
         [HttpPost]
         public async Task<IActionResult> AssignCategory(List<AssignCategoryModel> list)
@@ -107,9 +119,10 @@ namespace merigurumiblogFront.Areas.Admin.Controllers
                     model.CategoryId = item.CategoryId;
                     await _blogApiService.RemoveFromCategoryAsync(model);
                 }
-            
             }
+
             return RedirectToAction("Index");
         }
     }
+
 }

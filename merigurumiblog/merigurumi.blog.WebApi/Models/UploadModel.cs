@@ -1,4 +1,4 @@
-﻿using merigurumi.blog.WebApi.Enams;
+﻿using merigurumi.blog.WebApi.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
